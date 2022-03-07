@@ -1,9 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
-import VisitorList from "./Component/VisitorList";
+import BookingsList from "./Component/Tabs";
 
 function App() {
-  return <VisitorList />;
+  return <BookingsList />;
 }
 
 export default App;
