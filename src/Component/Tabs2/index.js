@@ -1,13 +1,12 @@
-import { NoEncryption } from "@material-ui/icons";
 import React, { Component } from "react";
 import { Form, Modal, Tab, Tabs } from "react-bootstrap";
+import ReservationHistory from "../Reservation";
 import { Link } from "react-router-dom";
-import MemberBookingList from "../VisitorList";
 
-export class BookingsList extends Component {
+export class Reservation extends Component {
   render() {
     return (
-      <Link to="/" style={{ textDecoration: "none" }}>
+      <Link to="reservation" style={{ textDecoration: "none" }}>
         {" "}
         <div className="row">
           <div className="col-lg-12 grid-margin stretch-card">
@@ -20,16 +19,16 @@ export class BookingsList extends Component {
                 <Tabs id="uncontrolled-tab-example" className="mb-3 ">
                   <Tab
                     tabClassName="btn btn-primary"
-                    eventKey="Bookinghistory"
-                    title="Booking History"
+                    eventKey="ReservationHistory"
+                    title="Reservation History"
                   >
-                    <MemberBookingList />
+                    <ReservationHistory />
                   </Tab>
 
                   <Tab
                     tabClassName="btn btn-primary"
-                    eventKey="UpcomingBookings"
-                    title="Upcoming Bookings"
+                    eventKey="upcomingReservation"
+                    title="Upcoming Reservation"
                   ></Tab>
                 </Tabs>
               </div>
@@ -41,4 +40,4 @@ export class BookingsList extends Component {
   }
 }
 
-export default BookingsList;
+export default Reservation;
